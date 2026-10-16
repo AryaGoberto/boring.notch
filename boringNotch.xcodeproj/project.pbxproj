@@ -143,6 +143,10 @@
 		B1F747F92EC7E94000F841DB /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F747F82EC7E94000F841DB /* LottieView.swift */; };
 		B1FEB4992C7686630066EBBC /* PanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FEB4982C7686630066EBBC /* PanGesture.swift */; };
 		F38DE6482D8243E7008B5C6D /* BatteryActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DE6472D8243E2008B5C6D /* BatteryActivityManager.swift */; };
+		A10000022E99000100000002 /* SystemStatsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000012E99000100000001 /* SystemStatsManager.swift */; };
+		A10000042E99000100000004 /* SystemStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000032E99000100000003 /* SystemStatsView.swift */; };
+		B10000022E99000100000002 /* ProductivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000012E99000100000001 /* ProductivityManager.swift */; };
+		B10000042E99000100000004 /* ProductivityToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000032E99000100000003 /* ProductivityToolsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -309,6 +313,10 @@
 		B1F747F82EC7E94000F841DB /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		B1FEB4982C7686630066EBBC /* PanGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGesture.swift; sourceTree = "<group>"; };
 		F38DE6472D8243E2008B5C6D /* BatteryActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryActivityManager.swift; sourceTree = "<group>"; };
+		A10000012E99000100000001 /* SystemStatsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemStatsManager.swift; sourceTree = "<group>"; };
+		A10000032E99000100000003 /* SystemStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemStatsView.swift; sourceTree = "<group>"; };
+		B10000012E99000100000001 /* ProductivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductivityManager.swift; sourceTree = "<group>"; };
+		B10000032E99000100000003 /* ProductivityToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductivityToolsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -487,6 +495,8 @@
 			isa = PBXGroup;
 			children = (
 				B141C23B2CA5F50900AC8CC8 /* Onboarding */,
+				A10000052E99000100000005 /* Stats */,
+				B10000052E99000100000005 /* Tools */,
 				B1C448992C97375A001F0858 /* Tips */,
 				14C08BB72C8DE49E000F8AA0 /* Calendar */,
 				9A987A042C73CA66005CA465 /* Shelf */,
@@ -507,9 +517,27 @@
 			path = components;
 			sourceTree = "<group>";
 		};
+		B10000052E99000100000005 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				B10000032E99000100000003 /* ProductivityToolsView.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		A10000052E99000100000005 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				A10000032E99000100000003 /* SystemStatsView.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
 		147163B52C5D804B0068B555 /* managers */ = {
 			isa = PBXGroup;
 			children = (
+				B10000012E99000100000001 /* ProductivityManager.swift */,
+				A10000012E99000100000001 /* SystemStatsManager.swift */,
 				11D58EA12E760AE100FA8377 /* ImageService.swift */,
 				F38DE6472D8243E2008B5C6D /* BatteryActivityManager.swift */,
 				112FB7342CCF16F70015238C /* NotchSpaceManager.swift */,
@@ -1020,6 +1048,10 @@
 				1100290C2E847E2800035A57 /* NSItemProvider+LoadHelpers.swift in Sources */,
 				11CFC6632E09918400748C80 /* MusicControllerSelectionView.swift in Sources */,
 				B1F0A0022E60000100000001 /* BrightnessManager.swift in Sources */,
+				A10000022E99000100000002 /* SystemStatsManager.swift in Sources */,
+				A10000042E99000100000004 /* SystemStatsView.swift in Sources */,
+				B10000022E99000100000002 /* ProductivityManager.swift in Sources */,
+				B10000042E99000100000004 /* ProductivityToolsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

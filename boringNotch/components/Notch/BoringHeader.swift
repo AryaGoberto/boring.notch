@@ -12,11 +12,12 @@ struct BoringHeader: View {
     @EnvironmentObject var vm: BoringViewModel
     @ObservedObject var batteryModel = BatteryStatusViewModel.shared
     @ObservedObject var coordinator = BoringViewCoordinator.shared
+    @ObservedObject var systemStats = SystemStatsManager.shared
     @StateObject var tvm = ShelfStateViewModel.shared
     var body: some View {
         HStack(spacing: 0) {
             HStack {
-                if (!tvm.isEmpty || coordinator.alwaysShowTabs) && Defaults[.boringShelf] {
+                if (!tvm.isEmpty || coordinator.alwaysShowTabs) {
                     TabSelectionView()
                 } else if vm.notchState == .open {
                     EmptyView()
@@ -58,6 +59,25 @@ struct BoringHeader: View {
                             }
                             .buttonStyle(PlainButtonStyle())
                         }
+
+                        Button(action: {
+                            withAnimation(.smooth) {
+                                coordinator.currentView = (coordinator.currentView == .stats ? .home : .stats)
+                            }
+                        }) {
+                            HStack(spacing: 3) {
+                                Image(systemName: "cpu")
+                                    .font(.system(size: 9, weight: .bold))
+                                Text("\(Int(systemStats.cpuUsage))%")
+                                    .font(.system(size: 10, weight: .semibold, design: .monospaced))
+                            }
+                            .foregroundColor(coordinator.currentView == .stats ? .cyan : .white.opacity(0.85))
+                            .padding(.horizontal, 6)
+                            .frame(height: 24)
+                            .background(Capsule().fill(Color.white.opacity(coordinator.currentView == .stats ? 0.2 : 0.08)))
+                        }
+                        .buttonStyle(PlainButtonStyle())
+
                         if Defaults[.settingsIconInNotch] {
                             Button(action: {
                                 DispatchQueue.main.async {

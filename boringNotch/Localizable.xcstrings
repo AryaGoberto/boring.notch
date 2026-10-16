@@ -901,6 +901,9 @@
         }
       }
     },
+    "%lld Active Cores" : {
+
+    },
     "%lld%%" : {
       "localizations" : {
         "ar" : {
@@ -6101,6 +6104,9 @@
           }
         }
       }
+    },
+    "Copy teks apa saja (Cmd+C)" : {
+
     },
     "Corner radius scaling" : {
       "localizations" : {
@@ -12009,6 +12015,9 @@
         }
       }
     },
+    "Lock Mac" : {
+
+    },
     "Lottie JSON URL" : {
       "localizations" : {
         "ar" : {
@@ -13708,6 +13717,9 @@
           }
         }
       }
+    },
+    "Mic On" : {
+
     },
     "Mirror" : {
       "localizations" : {
@@ -18112,6 +18124,9 @@
         }
       }
     },
+    "Screenshot Tool" : {
+
+    },
     "Select the music source you want to use. You can change this later in the app settings." : {
       "localizations" : {
         "ar" : {
@@ -22215,6 +22230,9 @@
         }
       }
     },
+    "Uptime: %@" : {
+
+    },
     "Use music visualizer spectrogram" : {
       "localizations" : {
         "ar" : {
@@ -22414,6 +22432,9 @@
           }
         }
       }
+    },
+    "Used / Total" : {
+
     },
     "Using System Accent" : {
       "localizations" : {
